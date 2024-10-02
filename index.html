@@ -4,17 +4,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Favicon -->
     <link rel="icon" href="https://raw.githubusercontent.com/demosprojects/favicon/38bd730533d91d88d22453344cffe546412a714b/favicon.png" type="image/png">
-    <title>Canciones</title>
+    <title>Reproductor online</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>¡Escucha acá!</h1>
-        <p>Dale play y disfrutá.</p>
-
-        <iframe src="https://stream.spainrpradio.com/hq" width="300" height="80" frameborder="0" allow="autoplay" style="background-color:transparent; border:none;"></iframe>
+    <div id="splash-screen">
+        <a href="#" class="cta" id="enter-btn">
+            <span>Acceder al Reproductor</span>
+            <svg width="13px" height="10px" viewBox="0 0 13 10">
+                <path d="M1,5 L11,5"></path>
+                <polyline points="8 1 12 5 8 9"></polyline>
+            </svg>
+        </a>
     </div>
+
+    <!-- Contenido Principal -->
+    <div id="main-content">
+        <div class="container">
+            <h1>¡Escucha acá!</h1>
+            <p>Dale play y disfrutá.</p>
+
+            <!-- Reproductor de audio personalizado -->
+            <div class="audio-player">
+                <button id="play-pause-btn" class="play-btn">▶️</button>
+                <div class="progress-container">
+                    <div id="progress-bar" class="progress-bar"></div>
+                </div>
+                <audio id="audio" src="https://stream.spainrpradio.com/hq"></audio>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
