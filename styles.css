@@ -131,7 +131,10 @@ h1 {
 .play-btn:hover {
     background-color: #e98e7a;
 }
-
+.volume-slider {
+    margin-left: 20px;
+    width: 100px;
+}
 .progress-container {
     width: 300px;
     height: 10px;
