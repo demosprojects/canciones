@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var audio = document.getElementById("audio");
     var playPauseBtn = document.getElementById("play-pause-btn");
     var progressBar = document.getElementById("progress-bar");
+    var volumeSlider = document.getElementById("volume-slider");
 
     // Alternar entre reproducir y pausar
     playPauseBtn.addEventListener("click", function() {
@@ -41,6 +42,11 @@ document.addEventListener("DOMContentLoaded", function() {
         var width = progressContainer.offsetWidth;
         var duration = audio.duration;
         audio.currentTime = (clickX / width) * duration;
+    });
+
+    // Controlar el volumen del audio
+    volumeSlider.addEventListener("input", function() {
+        audio.volume = volumeSlider.value;
     });
 });
 
